@@ -2,6 +2,7 @@ import {getRandomColor, chartSort, validator} from './modules/utilites.js';
 import {chart} from './modules/chart.js';
 import {cellRender, tableRender, chartformatDate} from './modules/render.js';
 
+console.log('test');
 chart.data.datasets = JSON.parse(localStorage.getItem('dataSets')) || chart.data.datasets ;
 [...new Set(chart.data.datasets)].forEach(e => document.querySelector('#datalistOptions').innerHTML += `<option value=${e.label}>`)
 if (chart.data.datasets.length === 0) {
