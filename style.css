@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    user-select: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: gray;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1px;
+}
+.out{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    box-shadow: 0 0 0 1px;
+    background-color: rgb(118, 168, 202);
+}
+.same{  
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons, .result, .clear, .reduce{
+    cursor: pointer;
+    box-shadow: 0 0 0 1px;
+    background-color: rgba(201, 187, 187, 0.74);
+}
+.num{
+    background-color: rgba(255, 241, 241, 0.925);
+}
+.num:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    /* Lowering the shadow */
+}
+.same:active{
+    transform: scale(0.98);
+}
+.result{
+    background-color: rgb(118, 168, 202);
+}
