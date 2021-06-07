@@ -186,6 +186,7 @@ document.querySelector('tbody').addEventListener('click', (e) => {
             notification.classList.add(`notification`);
             document.querySelector('.main_table').append(notification);
         }
+        localStorage.setItem('dataSets', JSON.stringify(chart.data.datasets));
         clearModal();
         chart.update();
     }
